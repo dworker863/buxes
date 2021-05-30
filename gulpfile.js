@@ -35,7 +35,7 @@ function styles() {
 
 function scripts() {
   return gulp
-    .src(['./src/js/scripts.js'])
+    .src(['node_modules/jquery/dist/jquery.min.js', './src/js/scripts.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
@@ -58,7 +58,7 @@ function watch() {
     .watch('src/scss/**/*.scss', gulp.series(styles))
     .on('change', browserSync.reload);
   gulp
-    .watch('src/js/common.js', gulp.series(scripts))
+    .watch('src/js/scripts.js', gulp.series(scripts))
     .on('change', browserSync.reload);
 }
 
