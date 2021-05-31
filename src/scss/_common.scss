@@ -38,6 +38,7 @@ section {
   position: relative;
   width: 300px;
   overflow: hidden;
+  margin-bottom: 10px;
 
   &__items {
     width: 620px;
@@ -70,6 +71,42 @@ section {
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+@media (min-width: 576px) {
+  .item__title {
+    grid-area: title;
+  }
+
+  .slider {
+    grid-area: slider;
+  }
+
+  .item__desc {
+    grid-area: desc;
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'title title'
+      'slider desc';
+    gap: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .item {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .item {
+    grid-template-columns: 30% 70%;
   }
 }
 
