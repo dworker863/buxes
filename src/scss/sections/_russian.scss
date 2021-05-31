@@ -1,3 +1,7 @@
+.russian__subtitle {
+  color: $primary;
+}
+
 .slider {
   position: relative;
   width: 300px;
@@ -23,11 +27,17 @@
 
   .fa-chevron-left {
     opacity: 0.5;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .fa-chevron-right {
     position: absolute;
     right: 60px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
