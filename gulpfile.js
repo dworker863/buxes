@@ -11,7 +11,7 @@ const uglify = require('gulp-uglify-es').default;
 
 function html() {
   return gulp
-    .src('src/**/*.html')
+    .src('src/*.html')
     .pipe(
       htmlmin({
         collapseWhitespace: true,
@@ -51,15 +51,9 @@ function watch() {
     },
   });
 
-  gulp
-    .watch('src/**/*.html', gulp.series(html))
-    .on('change', browserSync.reload);
-  gulp
-    .watch('src/scss/**/*.scss', gulp.series(styles))
-    .on('change', browserSync.reload);
-  gulp
-    .watch('src/js/scripts.js', gulp.series(scripts))
-    .on('change', browserSync.reload);
+  gulp.watch('src/**/*.html', gulp.series(html)).on('change', browserSync.reload);
+  gulp.watch('src/scss/**/*.scss', gulp.series(styles)).on('change', browserSync.reload);
+  gulp.watch('src/js/scripts.js', gulp.series(scripts)).on('change', browserSync.reload);
 }
 
 function clear() {
@@ -73,7 +67,7 @@ function build(done) {
 
   gulp.src('src/fonts/**').pipe(gulp.dest('dist/fonts'));
 
-  gulp.src('src/images/**').pipe(gulp.dest('dist/images'));
+  gulp.src('src/img/**').pipe(gulp.dest('dist/img'));
 
   done();
 }

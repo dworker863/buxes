@@ -20,7 +20,8 @@
     display: block;
     padding-bottom: 30px;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: gold;
     }
   }
@@ -81,7 +82,7 @@
   }
 
   .hero {
-    background-image: url('../../img/bg.jpg');
+    background-image: url('../img/bg.jpg');
     padding-left: 45%;
   }
 }
