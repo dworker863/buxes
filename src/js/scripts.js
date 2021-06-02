@@ -32,10 +32,10 @@ $(document).ready(function () {
     if ($(window).scrollTop() + document.documentElement.clientHeight == document.documentElement.scrollHeight) {
       $('a').removeClass('active');
       $('a[href="#captcha"]').addClass('active');
-    } else if ($(window).scrollTop() >= $('#mining').offset().top) {
+    } else if ($(window).scrollTop() + 150 >= $('#mining').offset().top) {
       $('a').removeClass('active');
       $('a[href="#mining"]').addClass('active');
-    } else if ($(window).scrollTop() >= $('#foreign').offset().top) {
+    } else if ($(window).scrollTop() + 150 >= $('#foreign').offset().top) {
       $('a').removeClass('active');
       $('a[href="#foreign"]').addClass('active');
     } else {
