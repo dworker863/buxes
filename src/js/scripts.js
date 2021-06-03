@@ -36,9 +36,11 @@ $(document).ready(function () {
     } else if ($(window).scrollTop() + 150 >= $('#foreign').offset().top) {
       $('a').removeClass('active');
       $('a[href="#foreign"]').addClass('active');
-    } else {
+    } else if ($(window).scrollTop() + 150 >= $('#russian').offset().top) {
       $('a').removeClass('active');
       $('a[href="#russian"]').addClass('active');
+    } else {
+      $('a').removeClass('active');
     }
   });
 });
