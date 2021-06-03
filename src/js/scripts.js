@@ -15,7 +15,7 @@ $(document).ready(function () {
     $(this).closest('.slider').find('.slider__items').css({ transform: 'translateX(0)', transition: 'all, 0.5s' });
   });
 
-  $('a').click(function () {
+  $('.slider__items').click(function () {
     event.preventDefault();
   });
 
@@ -27,8 +27,6 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
-    console.log($('#russian').offset().top);
-    console.log($(window).scrollTop());
     if ($(window).scrollTop() + document.documentElement.clientHeight == document.documentElement.scrollHeight) {
       $('a').removeClass('active');
       $('a[href="#captcha"]').addClass('active');
