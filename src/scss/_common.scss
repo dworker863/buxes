@@ -40,12 +40,15 @@ section {
 }
 
 .slider {
-  position: relative;
   width: 300px;
   overflow: hidden;
   margin-bottom: 10px;
 
-  &__items {
+  .slider__items_container {
+    position: relative;
+  }
+
+  .slider__items {
     width: 620px;
   }
 }
@@ -72,7 +75,7 @@ section {
 
   .fa-chevron-right {
     position: absolute;
-    right: 60px;
+    left: 250px;
     &:hover {
       cursor: pointer;
     }
