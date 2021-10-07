@@ -7,12 +7,18 @@ $(document).ready(function () {
   $('.fa-chevron-right').click(function () {
     $(this).css('opacity', 0.5);
     $(this).prev().css('opacity', 1);
-    $(this).closest('.slider').find('.slider__items').css({ transform: 'translateX(-310px)', transition: 'all, 0.5s' });
+    $(this)
+      .closest('.slider')
+      .find('.slider__items')
+      .css({ transform: 'translateX(-310px)', transition: 'all, 0.5s' });
   });
   $('.fa-chevron-left').click(function () {
     $(this).css('opacity', 0.5);
     $(this).next().css('opacity', 1);
-    $(this).closest('.slider').find('.slider__items').css({ transform: 'translateX(0)', transition: 'all, 0.5s' });
+    $(this)
+      .closest('.slider')
+      .find('.slider__items')
+      .css({ transform: 'translateX(0)', transition: 'all, 0.5s' });
   });
 
   $('.slider__items').click(function () {
@@ -27,7 +33,10 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
-    if ($(window).scrollTop() + document.documentElement.clientHeight == document.documentElement.scrollHeight) {
+    if (
+      $(window).scrollTop() + document.documentElement.clientHeight ==
+      document.documentElement.scrollHeight
+    ) {
       $('a').removeClass('active');
       $('a[href="#captcha"]').addClass('active');
     } else if ($(window).scrollTop() + 150 >= $('#mining').offset().top) {
